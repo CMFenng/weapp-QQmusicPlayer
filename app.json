@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/player/player"
+  ],
+  "window": {
+  	"navigationBarBackgroundColor": "#C62723",
+  	"navigationBarTextStyle": "#FFFFFF",
+  	"navigationBarTitleText": "QQmusicPlayer",
+  	"backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  }
+}

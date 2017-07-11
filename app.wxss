@@ -1,0 +1,9 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  font-family: Microsoft YaHei;
+}
+
+/*audio, button{
+	font-family: Microsoft YaHei;
+}*/
