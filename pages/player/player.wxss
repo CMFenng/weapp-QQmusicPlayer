@@ -1,1 +1,23 @@
 /* player.wxss */
+.playerContainer {
+  width: 100%;
+  background-color: #ccc;
+  opacity: 0.8;
+}
+
+.songTitle, .singerName {
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+}
+
+.singerName {
+  font-size: 14px;
+}
+
+.songImg {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}

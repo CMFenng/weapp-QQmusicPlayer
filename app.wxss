@@ -1,5 +1,5 @@
 /**app.wxss**/
-.container {
+.playerContainer {
   height: 100%;
   font-family: Microsoft YaHei;
 }

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    songTitle: "一人饮酒醉",
+    singerName: "冯提莫"
   },
 
   /**
