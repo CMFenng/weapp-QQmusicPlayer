@@ -1,23 +1,172 @@
 /* player.wxss */
-.playerContainer {
-  width: 100%;
-  background-color: #ccc;
-  opacity: 0.8;
+.content {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 5;
 }
 
-.songTitle, .singerName {
-  color: #fff;
-  display: block;
-  text-align: center;
-  line-height: 25px;
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.singerName {
-  font-size: 14px;
+.songInfo {
+	color: #fff;
+	padding-top: 20rpx;
+}
+
+.songInfo text {
+	width: 100%;
+	height: 60rpx;
+	line-height: 60rpx;
+}
+
+.songSinger {
+	font-size: 32rpx;
+}
+
+swiper {
+	height: 800rpx;
+}
+
+.cd-gan {
+	width: 300rpx;
+	height: 200rpx;
+	/*background-image: url("../../assets/cd_gan.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/52301832.jpg");
+	background-size: cover;
+	position: absolute;
+	left: 25%;
+	top: 3%;
+	z-index: 10;
+}
+
+.cd-bg {
+	width: 600rpx;
+	height: 600rpx;
+	/*background-image: url("../../assets/cd_bg.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/21952676.jpg");
+	background-size: cover;
 }
 
 .songImg {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
+	width: 400rpx;
+	height: 400rpx;
+	border-radius: 50%;
+}
+
+.songControl {
+	padding: 0 40rpx;
+}
+
+.proBox {
+	height: 60rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.proTimeL, .proTimeR {
+	color: #fff;
+	font-size: 32rpx;
+}
+
+.progress {
+	display: inline-block;
+	background-color: #0f0;
+	width: 70%;
+	height: 10rpx;
+}
+
+.controlBtn {
+	height: 160rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.playType, .songListBtn {
+	width: 110rpx;
+	height: 110rpx;
+	background-size: cover;
+	display: inline-block;
+}
+
+.randomPlayBtn {
+	/*background-image: url("../../assets/btn_random.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/54230797.jpg");
+}
+
+.loopPlayBtn {
+	/*background-image: url("../../assets/btn_loop.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/45245410.jpg");
+}
+
+.onePlayBtn {
+	/*background-image: url("../../assets/btn_one.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/54468147.jpg");
+}
+
+.playCtl {
+	width: 140rpx;
+	height: 140rpx;
+	background-size: cover;
+	display: inline-block;
+}
+
+.prevSongBtn {
+	/*background-image: url("../../assets/btn_prev.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/12499356.jpg");
+}
+
+.pauseSongBtn {
+	/*background-image: url("../../assets/btn_pause.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/38480004.jpg");
+}
+
+.playSongBtn {
+	/*background-image: url("../../assets/btn_play.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/62272440.jpg");
+}
+
+.nextSongBtn {
+	/*background-image: url("../../assets/btn_next.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/50299919.jpg");
+}
+
+.songListBtn {
+	/*background-image: url("../../assets/btn_list.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/90210654.jpg");
+}
+
+.playList {
+	width: 100%;
+	height: 800rpx;
+	background-color: rgba(255,0,0,.5);
+	position: absolute;
+	bottom: 0;
+}
+
+.listHeader {
+	/*width: 100%;*/
+	height: 80rpx;
+	border-bottom: 2rpx solid #ccc;
+	padding: 0 40rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bgBlur {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-size: cover;
+	background-position: center;
+	-webkit-filter: blur(40px);
 }

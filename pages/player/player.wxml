@@ -1,14 +1,59 @@
 <!--player.wxml-->
- <view class="playerContainer">
-  <view class="songInfo">
-    <text class="songTitle">{{ songTitle }}</text>
-    <text class="singerName">- {{ singerName }} -</text>
+<view class="container">
+  <view class="content">
+    <view class="songInfo">
+      <text class="songTitle center">一人饮酒醉</text>
+      <text class="songSinger center">- 冯提莫 -</text>
+    </view>
+    <swiper indicator-dots
+            indicator-color="rgba(255, 255, 255, .3)"
+            indicator-active-color="#fff">
+      <swiper-item class="songCD center">
+        <view class="cd-gan"></view>
+        <view class="cd-bg center">
+          <image class="songImg" src="http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg"></image>
+        </view>
+      </swiper-item>
+      <swiper-item class="songLyric center">歌词</swiper-item>
+    </swiper>
+    <view class="songControl">
+      <view class="proBox">
+        <text class="proTimeL">00:00</text>
+        <view class="progress"></view>
+        <text class="proTimeR">05:12</text>
+      </view>
+      <view class="controlBtn">
+        <view class="playType randomPlayBtn"></view>
+        <!-- <view class="playType loopPlayBtn"></view> -->
+        <!-- <view class="playType onePlayBtn"></view> -->
+        <view class="playCtl prevSongBtn"></view>
+        <view class="playCtl pauseSongBtn"></view>
+        <!-- <view class="playCtl playSongBtn"></view> -->
+        <view class="playCtl nextSongBtn"></view>
+        <view class="songListBtn"></view>
+      </view>
+    </view>
+    <view class="playList">
+      <view class="listHeader">
+        <text>播放列表(000)</text>
+        <text>清空</text>
+      </view>
+      <view class="listBox">
+        <!-- <block wx:for="{{}}"> -->
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+        <!-- </block> -->
+      </view>
+      <view class="closeListBtn">关闭</view>
+    </view>
   </view>
-  <scroll-view scroll-y style="width: 100%">
-    <view class="songImg">图片</view>
-    <view class="songImg">歌词</view>
-  </scroll-view>
-  <view class="lyric"></view>
-  <view class="progress"></view>
-  <view class="control"></view>
+  <view class="bgBlur" style="background-image: url('http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg');"></view>
 </view>
