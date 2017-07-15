@@ -1,6 +1,8 @@
 // player.js
 var num = 1;
 
+var util = require('../../utils/util.js');
+
 Page({
 
   /**
@@ -73,27 +75,35 @@ Page({
    */
   changePlayType: function () {
     
-    num++;
-    if (num>3) {
-      num=1;
-    }
+    // num++;
+    // if (num>3) {
+    //   num=1;
+    // }
 
-    if (num==1) {
-      this.setData({
-        "playType": "random"
-      });
-    }
-    if (num==2) {
-      this.setData({
-        "playType": "loop"
-      });
-    }
-    if (num==3) {
-      this.setData({
-        "playType": "one"
-      });
-    }
-    console.log(num);
+    // if (num==1) {
+    //   this.setData({
+    //     "playType": "random"
+    //   });
+    // }
+    // if (num==2) {
+    //   this.setData({
+    //     "playType": "loop"
+    //   });
+    // }
+    // if (num==3) {
+    //   this.setData({
+    //     "playType": "one"
+    //   });
+    // }
+    // console.log(num);
+    util.getSearchMusic("冯提莫", 1, function (res) {
+      // body...
+      console.log(res);
+    });
+    util.getLyric(108497767, function (res) {
+      // body...
+      console.log(res);
+    });
   },
 
   /**
@@ -124,3 +134,4 @@ Page({
     });
   }
 })
+
