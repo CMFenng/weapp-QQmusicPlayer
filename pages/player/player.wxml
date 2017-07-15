@@ -23,22 +23,32 @@
         <text class="proTimeR">05:12</text>
       </view>
       <view class="controlBtn">
-        <view class="playType randomPlayBtn"></view>
-        <!-- <view class="playType loopPlayBtn"></view> -->
-        <!-- <view class="playType onePlayBtn"></view> -->
+        <view class="playType randomPlayBtn"
+              wx:if="{{ playType == 'random' }}"
+              bindtap="changePlayType"></view>
+        <view class="playType loopPlayBtn"
+              wx:if="{{ playType == 'loop' }}"
+              bindtap="changePlayType"></view>
+        <view class="playType onePlayBtn"
+              wx:if="{{ playType == 'one' }}"
+              bindtap="changePlayType"></view>
         <view class="playCtl prevSongBtn"></view>
-        <view class="playCtl pauseSongBtn"></view>
-        <!-- <view class="playCtl playSongBtn"></view> -->
+        <view class="playCtl pauseSongBtn"
+              wx:if="{{ !isPlay }}"
+              bindtap="togglePlayStatus"></view>
+        <view class="playCtl playSongBtn"
+              wx:if="{{ isPlay }}"
+              bindtap="togglePlayStatus"></view>
         <view class="playCtl nextSongBtn"></view>
-        <view class="songListBtn"></view>
+        <view class="songListBtn" bindtap="showPlayList"></view>
       </view>
     </view>
-    <view class="playList">
+    <view class="playList" wx:if="{{ isShowPlayList }}">
       <view class="listHeader">
         <text>播放列表(000)</text>
         <text>清空</text>
       </view>
-      <view class="listBox">
+      <scroll-view class="listBox" scroll-y>
         <!-- <block wx:for="{{}}"> -->
           <view class="songItem">
             <text class="itemName">爱的供养</text>
@@ -50,9 +60,79 @@
             <text class="itemAutor"> - 分提莫</text>
             <text class="delSong">X</text>
           </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
+          <view class="songItem">
+            <text class="itemName">爱的供养</text>
+            <text class="itemAutor"> - 分提莫</text>
+            <text class="delSong">X</text>
+          </view>
         <!-- </block> -->
-      </view>
-      <view class="closeListBtn">关闭</view>
+      </scroll-view>
+      <view class="closeListBtn" bindtap="hidePlayList">关闭</view>
     </view>
   </view>
   <view class="bgBlur" style="background-image: url('http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg');"></view>

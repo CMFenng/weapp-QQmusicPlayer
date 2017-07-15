@@ -1,11 +1,15 @@
 // player.js
+var num = 1;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    "playType": "random",
+    "isPlay": false,
+    "isShowPlayList": false
   },
 
   /**
@@ -61,6 +65,62 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    
+  },
+
+  /**
+   * 切换歌曲播放类型的处理函数
+   */
+  changePlayType: function () {
+    
+    num++;
+    if (num>3) {
+      num=1;
+    }
+
+    if (num==1) {
+      this.setData({
+        "playType": "random"
+      });
+    }
+    if (num==2) {
+      this.setData({
+        "playType": "loop"
+      });
+    }
+    if (num==3) {
+      this.setData({
+        "playType": "one"
+      });
+    }
+    console.log(num);
+  },
+
+  /**
+   * 切换播放状态的处理函数
+   */
+  togglePlayStatus: function () {
+    var self = this;
+    this.setData({
+      "isPlay": !self.isPlay
+    });
+  },
+
+  /**
+   * 显示播放列表的处理函数
+   */
+  showPlayList: function () {
+    this.setData({
+      "isShowPlayList": true
+    });
+  },
+
+  /**
+   * 隐藏播放列表的处理函数
+   */
+  hidePlayList: function () {
+    this.setData({
+      "isShowPlayList": false
+    });
   }
 })
