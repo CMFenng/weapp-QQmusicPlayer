@@ -1,1 +1,76 @@
 /* search.wxss */
+page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.searchBar {
+	padding: 20rpx;
+	background-color: #f7f7f7;
+	display: flex;
+	flex: none;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.searchWrap {
+	height: 60rpx;
+	padding: 0 15rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+	display: flex;
+	flex: auto;
+	align-items: center;
+	/*position: relative;*/
+}
+
+.searchIpt {
+	padding: 0 15rpx;
+	font-size: 28rpx;
+	flex: auto;
+}
+
+.searchBtn {
+	padding: 0 15rpx;
+}
+
+.resultBox {
+	flex: auto;
+	position: relative;
+	padding: 0 20rpx;
+}
+
+.resultBox scroll-view {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: pink;
+}
+
+.songItem {
+	display: flex;
+	flex-direction: column;
+}
+
+.songItem text {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: green;
+}
+
+.itemName {
+	
+}
+
+.itemAutor {
+
+}

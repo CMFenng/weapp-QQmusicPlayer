@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/search/search",
+    "pages/toplist/toplist",
     "pages/player/player"
   ],
   "window": {
@@ -7,5 +9,21 @@
     "navigationBarTextStyle": "#FFFFFF",
     "navigationBarTitleText": "QQmusicPlayer",
     "backgroundColor": "#f7f7f7"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#31c27c",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/toplist/toplist",
+      "text": "排行榜"
+    },{
+      "pagePath": "pages/search/search",
+      "text": "搜索"
+    },{
+      "pagePath": "pages/player/player",
+      "text": "播放界面"
+    }],
+    "position": "top"
   }
 }

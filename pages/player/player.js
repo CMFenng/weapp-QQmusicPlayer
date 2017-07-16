@@ -96,7 +96,7 @@ Page({
     //   });
     // }
     // console.log(num);
-    util.getSearchMusic("冯提莫", 1, function (res) {
+    util.getSearchMusic("冯提莫", 2, function (res) {
       // body...
       console.log(res);
     });

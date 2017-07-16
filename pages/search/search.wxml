@@ -1,4 +1,27 @@
 <!--search.wxml-->
 <view class="container">
-  <text>搜索页面</text>
+  <view class="searchBar">
+    <view class="searchWrap">
+      <icon type="search" size="20"/>
+      <input class="searchIpt" placeholder="输入歌名、人名搜索歌曲"/>
+      <icon type="clear" size="20" wx:if="{{ isShowClearBtn }}"/>
+    </view>
+    <view class="searchBtn">搜索</view>
+  </view>
+  <view class="resultBox">
+    <scroll-view>
+      <view class="songItem">
+        <text class="itemName">易燃易爆炸易燃易爆炸易燃易爆炸易燃易爆炸易燃易爆炸</text>
+        <text class="itemAutor">易燃易爆炸易燃易爆炸易燃易爆炸冯提莫/冯提莫/冯提莫</text>
+      </view>
+      <view class="songItem">
+        <text class="itemName">易燃易爆炸易燃易爆炸易燃易爆炸易燃易爆炸易燃易爆炸</text>
+        <text class="itemAutor">易燃易爆炸易燃易爆炸易燃易爆炸冯提莫/冯提莫/冯提莫</text>
+      </view>
+      <view class="songItem">
+        <text class="itemName">易燃易爆炸易燃易爆炸易燃易爆炸易燃易爆炸易燃易爆炸</text>
+        <text class="itemAutor">易燃易爆炸易燃易爆炸易燃易爆炸冯提莫/冯提莫/冯提莫</text>
+      </view>
+    </scroll-view>
+  </view>
 </view>

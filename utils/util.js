@@ -45,18 +45,21 @@ function getSearchMusic(keyword, page, callbackFn) {
       keyword: keyword,
       page: page
     },
+    method: "GET",
     header: {
-        'Content-Type': 'application/json'
+      'Content-Type': 'application/json'
     },
     success: function(res) {
-      callbackFn(res);
-      // console.log(res);
+      console.log(res);
+      if (res.statusCode == 200) {
+        callbackFn(res.data);
+      }
     },
     fail: function(res) {
-      
+      console.log(res);
     },
     complete: function(res) {
-      
+      console.log(res);
     }
   })
 }
@@ -80,8 +83,12 @@ function getLyric(musicid, callbackFn) {
     header: {
         'Content-Type': 'application/json'
     },
+    method: "GET",
     success: function(res) {
-      callbackFn(res);
+      console.log(res);
+      if (res.statusCode == 200) {
+        callbackFn(res.data);
+      }
     },
     fail: function(res) {
       
