@@ -27,13 +27,16 @@ page {
 	display: flex;
 	flex: auto;
 	align-items: center;
-	/*position: relative;*/
 }
 
 .searchIpt {
 	padding: 0 15rpx;
 	font-size: 28rpx;
 	flex: auto;
+}
+
+.placeholder {
+	font-family: "Microsoft YaHei";
 }
 
 .searchBtn {
@@ -43,7 +46,6 @@ page {
 .resultBox {
 	flex: auto;
 	position: relative;
-	padding: 0 20rpx;
 }
 
 .resultBox scroll-view {
@@ -52,25 +54,31 @@ page {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: pink;
 }
 
 .songItem {
 	display: flex;
 	flex-direction: column;
+	padding: 0 50rpx;
+	border-bottom: 1rpx solid #e5e5e5;
 }
 
 .songItem text {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	background-color: green;
-}
-
-.itemName {
-	
+	line-height: 40rpx;
+	padding-top: 10rpx;
 }
 
 .itemAutor {
+	color: #808080;
+	font-size: 28rpx;
+}
 
+.loading, .loadComplete {
+	line-height: 50rpx;
+	text-align: center;
+	font-size: 30rpx;
+	color: #808080;
 }

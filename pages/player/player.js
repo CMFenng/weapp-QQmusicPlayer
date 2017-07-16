@@ -1,7 +1,8 @@
 // player.js
-var num = 1;
+let num = 1;
 
-var util = require('../../utils/util.js');
+let util = require('../../utils/util.js');
+let app = getApp();
 
 Page({
 
@@ -11,14 +12,32 @@ Page({
   data: {
     "playType": "random",
     "isPlay": false,
-    "isShowPlayList": false
+    "isShowPlayList": false,
+    "currentSong": null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // console.log(app.globalData.songData);
+    this.setData({
+      "currentSong": app.globalData.songData
+    });
+    wx.playBackgroundAudio({
+        dataUrl: this.data.currentSong.m4a,
+        title: '',
+        coverImgUrl: '',
+        success: function(res) {
+          console.log("成功");
+        },
+        fail: function(res) {
+          
+        },
+        complete: function(res) {
+          
+        }
+    });
   },
 
   /**
@@ -75,42 +94,34 @@ Page({
    */
   changePlayType: function () {
     
-    // num++;
-    // if (num>3) {
-    //   num=1;
-    // }
+    num++;
+    if (num>3) {
+      num=1;
+    }
 
-    // if (num==1) {
-    //   this.setData({
-    //     "playType": "random"
-    //   });
-    // }
-    // if (num==2) {
-    //   this.setData({
-    //     "playType": "loop"
-    //   });
-    // }
-    // if (num==3) {
-    //   this.setData({
-    //     "playType": "one"
-    //   });
-    // }
-    // console.log(num);
-    util.getSearchMusic("冯提莫", 2, function (res) {
-      // body...
-      console.log(res);
-    });
-    util.getLyric(108497767, function (res) {
-      // body...
-      console.log(res);
-    });
+    if (num==1) {
+      this.setData({
+        "playType": "random"
+      });
+    }
+    if (num==2) {
+      this.setData({
+        "playType": "loop"
+      });
+    }
+    if (num==3) {
+      this.setData({
+        "playType": "one"
+      });
+    }
+    console.log(num);
   },
 
   /**
    * 切换播放状态的处理函数
    */
   togglePlayStatus: function () {
-    var self = this;
+    let self = this;
     this.setData({
       "isPlay": !self.isPlay
     });

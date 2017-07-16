@@ -2,8 +2,8 @@
 <view class="container">
   <view class="content">
     <view class="songInfo">
-      <text class="songTitle center">一人饮酒醉</text>
-      <text class="songSinger center">- 冯提莫 -</text>
+      <text class="songTitle center">{{ currentSong.songname }}</text>
+      <text class="songSinger center">- {{ currentSong.singername }} -</text>
     </view>
     <swiper indicator-dots
             indicator-color="rgba(255, 255, 255, .3)"
@@ -11,7 +11,7 @@
       <swiper-item class="songCD center">
         <view class="cd-gan"></view>
         <view class="cd-bg center">
-          <image class="songImg" src="http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg"></image>
+          <image class="songImg" src="{{ currentSong.albumpic_big }}"></image>
         </view>
       </swiper-item>
       <swiper-item class="songLyric center">歌词</swiper-item>

@@ -20,9 +20,6 @@
     },{
       "pagePath": "pages/search/search",
       "text": "搜索"
-    },{
-      "pagePath": "pages/player/player",
-      "text": "播放界面"
     }],
     "position": "top"
   }

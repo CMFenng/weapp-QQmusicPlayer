@@ -50,16 +50,16 @@ function getSearchMusic(keyword, page, callbackFn) {
       'Content-Type': 'application/json'
     },
     success: function(res) {
-      console.log(res);
+      // console.log(res);
       if (res.statusCode == 200) {
         callbackFn(res.data);
       }
     },
     fail: function(res) {
-      console.log(res);
+      // console.log(res);
     },
     complete: function(res) {
-      console.log(res);
+      // console.log(res);
     }
   })
 }
