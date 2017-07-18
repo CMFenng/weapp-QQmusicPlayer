@@ -195,5 +195,6 @@ swiper {
 	right: 0;
 	background-size: cover;
 	background-position: center;
-	-webkit-filter: blur(40px);
+	filter: blur(40px);
+	filter: brightness(50%);
 }

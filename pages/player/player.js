@@ -13,7 +13,8 @@ Page({
     "playType": "random",
     "isPlay": false,
     "isShowPlayList": false,
-    "currentSong": null
+    "currentSong": null,
+    "songList": null
   },
 
   /**
@@ -22,7 +23,8 @@ Page({
   onLoad: function (options) {
     // console.log(app.globalData.songData);
     this.setData({
-      "currentSong": app.globalData.songData
+      "currentSong": app.globalData.songData,
+      "songList": app.globalData.songList
     });
     wx.playBackgroundAudio({
         dataUrl: this.data.currentSong.m4a,

@@ -135,5 +135,5 @@
       <view class="closeListBtn" bindtap="hidePlayList">关闭</view>
     </view>
   </view>
-  <view class="bgBlur" style="background-image: url('http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg');"></view>
+  <view class="bgBlur" style="background-image: url({{ currentSong.albumpic_big }});"></view>
 </view>

@@ -79,14 +79,24 @@ Page({
    * @return {none}     无
    */
   getIptValue: function (e) {
-    this.setData({
-      "inputValue": e.detail.value
-    });
+    console.log(e.detail.value);
+    if (e.detail.value) {
+      this.setData({
+        "inputValue": e.detail.value
+      });
+    } else {
+      this.clearIptValue();
+    }
+    
   },
 
   clearIptValue: function () {
     this.setData({
-      "inputValue": ""
+      "inputValue": "",
+      "searchSongList": [],
+      "isSongListEmpty": true,
+      "isLoading": false,
+      "isLoadComplete": false
     });
   },
 
@@ -95,10 +105,12 @@ Page({
   },
 
   playMusic: function (e) {
+    let self = this;
     let songData = e.currentTarget.dataset.data;
-    
+
     app.setGlobalData({
-      "songData": songData
+      "songData": songData,
+      "songList": self.data.searchSongList
     });
     wx.navigateTo({
       url: '../player/player'
