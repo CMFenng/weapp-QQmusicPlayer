@@ -90,6 +90,10 @@ Page({
     
   },
 
+  /**
+   * 清空输入框的值
+   * @return {none} 无
+   */
   clearIptValue: function () {
     this.setData({
       "inputValue": "",
@@ -100,6 +104,10 @@ Page({
     });
   },
 
+  /**
+   * 根据关键字搜索
+   * @return {none} 无
+   */
   keywordSearchFn: function () {
     this.handleSearchData();
   },
