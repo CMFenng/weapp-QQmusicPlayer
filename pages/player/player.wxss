@@ -101,12 +101,12 @@ swiper {
 	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/54230797.jpg");
 }
 
-.loopPlayBtn {
+.orderPlayBtn {
 	/*background-image: url("../../assets/btn_loop.png");*/
 	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/45245410.jpg");
 }
 
-.onePlayBtn {
+.loopPlayBtn {
 	/*background-image: url("../../assets/btn_one.png");*/
 	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/54468147.jpg");
 }
@@ -124,13 +124,13 @@ swiper {
 }
 
 .pauseSongBtn {
-	/*background-image: url("../../assets/btn_pause.png");*/
-	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/38480004.jpg");
+	/*background-image: url("../../assets/btn_play.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/62272440.jpg");
 }
 
 .playSongBtn {
-	/*background-image: url("../../assets/btn_play.png");*/
-	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/62272440.jpg");
+	/*background-image: url("../../assets/btn_pause.png");*/
+	background-image: url("http://on3f2smuc.bkt.clouddn.com/17-7-14/38480004.jpg");
 }
 
 .nextSongBtn {
@@ -170,6 +170,18 @@ swiper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.itemInfo {
+	flex: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.itemAutor {
+	color: #808080;
+	font-size: 28rpx;
 }
 
 .listBox {

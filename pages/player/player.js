@@ -1,6 +1,4 @@
 // player.js
-let num = 1;
-
 let util = require('../../utils/util.js');
 let app = getApp();
 
@@ -10,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    "playType": "random",
+    "playType": "order",
     "isPlay": false,
     "isShowPlayList": false,
     "currentSong": null,
@@ -21,25 +19,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(app.globalData.songData);
-    this.setData({
-      "currentSong": app.globalData.songData,
-      "songList": app.globalData.songList
-    });
-    wx.playBackgroundAudio({
-        dataUrl: this.data.currentSong.m4a,
-        title: '',
-        coverImgUrl: '',
-        success: function(res) {
-          console.log("成功");
-        },
-        fail: function(res) {
-          
-        },
-        complete: function(res) {
-          
-        }
-    });
+    // this.setData({
+    //   "currentSong": app.globalData.songData,
+    //   "songList": app.globalData.songList
+    // });
+    this.playMusic();
   },
 
   /**
@@ -91,42 +75,59 @@ Page({
     
   },
 
+  playMusic: function () {
+    this.setData({
+      "currentSong": app.globalData.songData,
+      "songList": app.globalData.songList,
+      "isPlay": true
+    });
+    wx.playBackgroundAudio({
+        dataUrl: this.data.currentSong.m4a,
+        success: function(res) {
+          console.log("播放...");
+        },
+        fail: function(res) {
+          
+        },
+        complete: function(res) {
+          
+        }
+    });
+  },
+
+  pauseMusic: function () {
+    wx.pauseBackgroundAudio();
+    this.setData({
+      "isPlay": false
+    });
+    console.log("暂停...");
+  },
+
+  prevMusic: function () {
+    console.log("上一首");
+  },
+
+  nextMusic: function () {
+    console.log("下一首");
+  },
+
   /**
    * 切换歌曲播放类型的处理函数
    */
   changePlayType: function () {
-    
-    num++;
-    if (num>3) {
-      num=1;
-    }
-
-    if (num==1) {
-      this.setData({
-        "playType": "random"
-      });
-    }
-    if (num==2) {
-      this.setData({
-        "playType": "loop"
-      });
-    }
-    if (num==3) {
-      this.setData({
-        "playType": "one"
-      });
-    }
-    console.log(num);
+    let type = this.data.playType;
+    type === "order" ? type = "random" : type === "random" ? type = "loop" : type = "order"
+    this.setData({
+      "playType": type
+    });
+    console.log(this.data.playType);
   },
 
   /**
    * 切换播放状态的处理函数
    */
   togglePlayStatus: function () {
-    let self = this;
-    this.setData({
-      "isPlay": !self.isPlay
-    });
+    this.data.isPlay ? this.pauseMusic() : this.playMusic();
   },
 
   /**
@@ -136,6 +137,13 @@ Page({
     this.setData({
       "isShowPlayList": true
     });
+  },
+
+  playOtherMusic: function (e) {
+    app.setGlobalData({
+      "songData": e.currentTarget.dataset.data
+    });
+    this.playMusic();
   },
 
   /**

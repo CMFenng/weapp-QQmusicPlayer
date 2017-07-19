@@ -16,7 +16,9 @@ App({
 
   // 全局数据
   globalData: {
+    // 当前播放歌曲信息
     songData: null,
+    // 播放列表
     songList: null
   }
 })

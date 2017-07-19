@@ -87,7 +87,6 @@ Page({
     } else {
       this.clearIptValue();
     }
-    
   },
 
   /**
@@ -100,7 +99,8 @@ Page({
       "searchSongList": [],
       "isSongListEmpty": true,
       "isLoading": false,
-      "isLoadComplete": false
+      "isLoadComplete": false,
+      "searchPageNum": 1
     });
   },
 
@@ -109,20 +109,14 @@ Page({
    * @return {none} 无
    */
   keywordSearchFn: function () {
+    if (!this.data.inputValue) {
+      wx.showToast({
+        title: "请输入搜索内容",
+        duration: 1500
+      });
+      return;
+    }
     this.handleSearchData();
-  },
-
-  playMusic: function (e) {
-    let self = this;
-    let songData = e.currentTarget.dataset.data;
-
-    app.setGlobalData({
-      "songData": songData,
-      "songList": self.data.searchSongList
-    });
-    wx.navigateTo({
-      url: '../player/player'
-    })
   },
 
   scrolltolower: function () {
@@ -134,6 +128,20 @@ Page({
       });
       self.handleSearchData();
     }
+  },
+
+  playMusic: function (e) {
+    let self = this;
+    let songData = e.currentTarget.dataset.data;
+
+    app.setGlobalData({
+      "songData": songData,
+      // 此处暂时将搜索结果放到播放列表
+      "songList": self.data.searchSongList
+    });
+    wx.navigateTo({
+      url: '../player/player'
+    })
   },
 
   handleSearchData: function () {

@@ -56,7 +56,7 @@ function getSearchMusic(keyword, page, callbackFn) {
       }
     },
     fail: function(res) {
-      // console.log(res);
+      console.log("请求失败！");
     },
     complete: function(res) {
       // console.log(res);
@@ -91,10 +91,10 @@ function getLyric(musicid, callbackFn) {
       }
     },
     fail: function(res) {
-      
+      console.log("请求失败！");
     },
     complete: function(res) {
-      
+      // console.log(res);
     }
   })
 }
