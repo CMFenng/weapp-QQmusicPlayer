@@ -12,7 +12,9 @@ Page({
     "isPlay": false,
     "isShowPlayList": false,
     "currentSong": null,
-    "songList": null
+    "songList": null,
+    "lyric": "",
+    "lyric_txt": ""
   },
 
   /**
@@ -93,6 +95,9 @@ Page({
           
         }
     });
+
+    // 显示歌词
+    this.showLyric();
   },
 
   pauseMusic: function () {
@@ -152,6 +157,19 @@ Page({
   hidePlayList: function () {
     this.setData({
       "isShowPlayList": false
+    });
+  },
+
+  showLyric: function () {
+    let self = this;
+
+    util.getLyric(self.data.currentSong.songid, function (res) {
+      let lyric = res.showapi_res_body.lyric;
+      let lyric_txt = res.showapi_res_body.lyric_txt;
+
+      let lyricTxt = lyric.split("&#13;&#10;");
+
+      console.log(lyricTxt);
     });
   }
 })

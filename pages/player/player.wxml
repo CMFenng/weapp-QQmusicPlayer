@@ -11,7 +11,7 @@
       <swiper-item class="songCD center">
         <view class="cd-gan"></view>
         <view class="cd-bg center">
-          <image class="songImg" src="{{ currentSong.albumpic_big }}"></image>
+          <image class="songImg" src="{{ currentSong.albumpic_big ? currentSong.albumpic_big : 'http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg' }}"></image>
         </view>
       </swiper-item>
       <swiper-item class="songLyric center">歌词</swiper-item>
@@ -64,5 +64,5 @@
       <view class="closeListBtn" bindtap="hidePlayList">关闭</view>
     </view>
   </view>
-  <view class="bgBlur" style="background-image: url({{ currentSong.albumpic_big }});"></view>
+  <view class="bgBlur" style="background-image: url({{ currentSong.albumpic_big ? currentSong.albumpic_big : 'http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg' }});"></view>
 </view>

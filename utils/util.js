@@ -85,7 +85,7 @@ function getLyric(musicid, callbackFn) {
     },
     method: "GET",
     success: function(res) {
-      console.log(res);
+      // console.log(res);
       if (res.statusCode == 200) {
         callbackFn(res.data);
       }
