@@ -33,6 +33,24 @@ swiper {
 	height: 800rpx;
 }
 
+.songLyric {
+	position: relative;
+}
+
+.lyricBox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+}
+
+.lyricBox view {
+	width: 100%;
+	text-align: center;
+}
+
 .cd-gan {
 	width: 300rpx;
 	height: 200rpx;

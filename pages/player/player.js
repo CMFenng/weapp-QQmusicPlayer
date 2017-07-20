@@ -167,9 +167,23 @@ Page({
       let lyric = res.showapi_res_body.lyric;
       let lyric_txt = res.showapi_res_body.lyric_txt;
 
-      let lyricTxt = lyric.split("&#13;&#10;");
+      lyric_txt = lyric_txt.split(" ");
 
-      console.log(lyricTxt);
+      let obj = {};
+      let arr = [];
+      console.log(lyric_txt);
+
+      for (let i = 0; i < lyric_txt.length; i++) {
+        if (!obj[lyric_txt[i]]) {
+          obj[lyric_txt[i]] = true;
+          arr.push(lyric_txt[i]);
+        }
+      }
+      console.log(arr);
+
+      self.setData({
+        "lyric": arr
+      });
     });
   }
 })

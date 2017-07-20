@@ -14,7 +14,11 @@
           <image class="songImg" src="{{ currentSong.albumpic_big ? currentSong.albumpic_big : 'http://on3f2smuc.bkt.clouddn.com/17-7-14/10742381.jpg' }}"></image>
         </view>
       </swiper-item>
-      <swiper-item class="songLyric center">歌词</swiper-item>
+      <swiper-item class="songLyric center">
+        <scroll-view class="lyricBox center" scroll-y>
+          <view wx:for="{{ lyric }}" wx:key="unique">{{ item }}</view>
+        </scroll-view>
+      </swiper-item>
     </swiper>
     <view class="songControl">
       <view class="proBox">
