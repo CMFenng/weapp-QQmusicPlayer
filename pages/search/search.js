@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    "inputValue": "",         // 输入的关键字
+    "inputValue": "冯提莫",         // 输入的关键字
     "searchSongList": [],     // 返回数据的歌曲列表
     "isSongListEmpty": true,  // 判断 searchSongList 是否为空，默认为空（true）
     "searchPageNum": 1,       // 加载的第几页，默认第一页
