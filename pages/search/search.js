@@ -133,6 +133,7 @@ Page({
   playMusic: function (e) {
     let self = this;
     let songData = e.currentTarget.dataset.data;
+    console.log(songData);
 
     app.setGlobalData({
       "songData": songData,

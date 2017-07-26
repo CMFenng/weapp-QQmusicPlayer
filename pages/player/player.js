@@ -14,7 +14,8 @@ Page({
     "currentSong": null,
     "songList": null,
     "lyric": "",
-    "lyric_txt": ""
+    "lyric_txt": "",
+    "animationData": {}
   },
 
   /**
@@ -98,6 +99,8 @@ Page({
 
     // 显示歌词
     this.showLyric();
+
+    this.animationFn();
   },
 
   pauseMusic: function () {
@@ -184,6 +187,21 @@ Page({
       self.setData({
         "lyric": arr
       });
+    });
+  },
+
+  animationFn: function () {
+    var animation = wx.createAnimation({
+      duration: 10000,
+      timingFunction: "linear"
+    });
+
+    this.animation = animation;
+
+    animation.rotate(180).step();
+
+    this.setData({
+      "animationData": animation.export()
     });
   }
 })
