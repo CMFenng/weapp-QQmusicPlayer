@@ -137,7 +137,7 @@ Page({
 
     app.setGlobalData({
       "songData": songData,
-      // 此处暂时将搜索结果放到播放列表
+      // 此处暂时将搜索结果放到播放列表。。。
       "songList": self.data.searchSongList
     });
     wx.navigateTo({
