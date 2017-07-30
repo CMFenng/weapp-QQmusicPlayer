@@ -194,6 +194,10 @@ Page({
     });
   },
 
+  /**
+   * 音乐播放是的动画效果
+   * @return {none} 无
+   */
   animationFn: function () {
     var animation = wx.createAnimation({
       duration: 10000,
