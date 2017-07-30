@@ -143,6 +143,11 @@ Page({
     });
   },
 
+  /**
+   * 点击播放列表中的歌曲的处理函数
+   * @param  {Obj} e 事件对象
+   * @return {none}   无
+   */
   playOtherMusic: function (e) {
     app.setGlobalData({
       "songData": e.currentTarget.dataset.data
@@ -159,6 +164,9 @@ Page({
     });
   },
 
+  /**
+   * 显示歌词的处理函数
+   */
   showLyric: function () {
     let self = this;
 
