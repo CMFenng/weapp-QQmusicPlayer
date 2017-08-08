@@ -101,7 +101,7 @@ function getLyric(musicid, callbackFn) {
 
 
 module.exports = {
-  formatTime: formatTime,
-  getSearchMusic: getSearchMusic,
-  getLyric: getLyric
+  formatTime,
+  getSearchMusic,
+  getLyric
 }
