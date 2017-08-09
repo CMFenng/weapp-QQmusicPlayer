@@ -99,7 +99,7 @@ function getLyric(musicid, callbackFn) {
   })
 }
 
-
+// 导出
 module.exports = {
   formatTime: formatTime,
   getSearchMusic: getSearchMusic,
