@@ -74,6 +74,9 @@ Page({
     
   },
 
+  /**
+   * 播放音乐
+   */
   playMusic: function () {
     this.setData({
       "currentSong": app.globalData.songData,
@@ -95,7 +98,7 @@ Page({
 
     // 显示歌词
     this.showLyric();
-
+    // 动画效果
     this.animationFn();
   },
 
