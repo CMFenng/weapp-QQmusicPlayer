@@ -101,7 +101,7 @@ Page({
     // 动画效果
     this.animationFn();
   },
-
+  // 暂停播放
   pauseMusic: function () {
     wx.pauseBackgroundAudio();
     this.setData({
@@ -109,11 +109,11 @@ Page({
     });
     console.log("暂停...");
   },
-
+  // 上一首
   prevMusic: function () {
     console.log("上一首");
   },
-
+  // 下一首
   nextMusic: function () {
     console.log("下一首");
   },
